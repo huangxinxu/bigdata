@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<!-- 引入 jquery、Bootstrap -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+        <div class="container">
+            <div class="row" style="height:150px"></div>
+            <div class="row" style="height:50px">
+                <div class="col-md-2 col-sm-0" >
+                </div>
+{#                <div class="col-md-8 col-sm-12" style="background-color: rgba(0, 205, 102, 0.4)">#}
+                 <div class="col-md-8 col-sm-12">
+                    <center><span style="color:black;margin: auto;">大数据专业实践</span></center>
+                </div>
+                <div class="col-md-2 col-sm-0" >
+                </div>
+            </div>
+            <div class="row">
+		<!-- 登录表单 -->
+        <form class="login-form" id="formid" name="myform" method='get' action='logincheck' onsubmit="return checkUser();">
+
+            {% if ctx %}
+            <div style="color:red">{{ ctx }}</div>
+            {% endif %}
+				<div class="form-group">
+					<label for="usernamel" style="color:black">用户名</label>
+					<input type="text" class="form-control" name="username" id="username" placeholder="请输入您的用户名">
+				</div>
+				<div class="form-group">
+					<label for="password" style="color:black">密码</label>
+					<input type="password" class="form-control" name="password" id="password" placeholder="请输入您的密码">
+				</div>
+				<div class="c3-1">
+					<center>
+						<button type="submit" id="login" class="btn btn-primary">登录</button>
+					</center>
+					<br />
+				</div>
+
+        </form>
+            </div>
+        </div>
+	</body>
+	<style type="text/css">
+		html body{
+			background: url(/static/img/back.png) no-repeat center;
+			background-size: 100%;
+            background-attachment: fixed;
+		}
+		span{
+			font-family: "\5FAE\8F6F\96C5\9ED1";
+			font-size: 30px;
+		}
+		.login-form {
+			width: 20%;
+			margin: auto;
+			margin-top: 5%;
+		}
+		{##toRegister {#}
+		{#	float: right;#}
+		{# }#}
+	</style>
+<script>
+     function checkUser(){
+         var username = document.getElementById("username").value;
+         var password = document.getElementById("userpassid").value;
+
+         if(username == ""  ){
+             alert("用户名不能为空");
+             return false;
+         }
+         if(password == ""  ){
+             alert("密码不能为空");
+             return false;
+         }else{
+             return true;
+         }}
+
+
+</script>
+</html>

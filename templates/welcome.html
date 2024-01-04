@@ -1,0 +1,27 @@
+{% extends "index.html" %} {% block mainbody %}
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+<!-- 引入Bootstrap样式 -->
+</head>
+<title></title>
+<style>
+
+</style>
+<div class="container">
+<div class="row">
+    <div class="col-md-4">
+        <p>原数据</p>
+        <img alt="Bootstrap 预览图片" src="{{ in_image_url }}" />
+    </div>
+    <div class="col-md-4">
+        <p>计算结果</p>
+        <img style="height: 400px;" alt="Bootstrap 预览图片" src="{{ out_image_url }}" />
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
